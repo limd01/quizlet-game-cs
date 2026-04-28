@@ -1,34 +1,31 @@
 package quizlet;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
+/**
+ * Represents the student using the quiz system.
+ */
 public class User {
-    private String name;
-    private int score;
-    
-    public User (String name){
-        this.name = name;
-        this.score = 0;
-    }
-    // Getter for name
-    public String getName() {
-        return name;
+    private String userName;
+    private int latestScore;
+
+    public User(String userName) {
+        this.userName = userName;
+        this.latestScore = 0;
     }
 
-    // Getter for score
-    public int getScore() {
-        return score;
+    public String getUserName() {
+        return userName;
     }
 
-    // Setter for score
-    public void setScore(int score) {
-        this.score = score;
+    public int getLatestScore() {
+        return latestScore;
     }
 
-    // Method to display user results
-    public void displayResult() {
-        System.out.println("User: " + name);
-        System.out.println("Score: " + score);
+    public void setLatestScore(int latestScore) {
+        this.latestScore = latestScore;
+    }
+
+    public void displayUserResult() {
+        System.out.println("Student: " + userName);
+        System.out.println("Latest correct answers: " + latestScore);
     }
 }
